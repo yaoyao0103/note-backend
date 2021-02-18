@@ -8,43 +8,17 @@
     <script src="js/lib/grapes.min.js"></script>
     <link rel="stylesheet" href="css/lib/grapes.min.css" />
 
-    <!-- Add Style and JS For Preset Webpage -->
-    <link rel="stylesheet" href="css/lib/grapesjs-preset-webpage.min.css" />
+    <!-- Add Style and Script for Preset Webpage Builder -->
     <script src="js/lib/grapesjs-preset-webpage.min.js"></script>
+    <link rel="stylesheet" href="css/lib/grapesjs-preset-webpage.min.css" />
+
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <div id="editor">
-      <h1>This is test Grapesjs</h1>
+      <p>Testing Editor using Grapes JS librrary</p>
     </div>
-    <script>
-      const editor = grapesjs.init({
-        container: "#editor",
-        fromElement: true,
-        width: "auto",
-        storageManager: false,
-        plugins: ["gjs-preset-webpage"],
-        pluginsOpts: {
-          "gjs-preset-webpage": {
-            // options
-          },
-        },
-      });
-    </script>
-    <style>
-      html {
-        overflow: scroll;
-        overflow-x: hidden;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-      }
-      ::-webkit-scrollbar {
-        display: none;
-      }
 
-      body {
-        padding: 0;
-        margin: 0;
-      }
-    </style>
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
