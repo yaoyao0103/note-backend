@@ -5,18 +5,151 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grapes JS Example</title>
+    <!-- Library -->
+    <link href="css/lib/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/lib/popper.min.js"></script>
+    <script src="js/lib/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="css/lib/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
     <script src="js/lib/grapes.min.js"></script>
     <link rel="stylesheet" href="css/lib/grapes.min.css" />
 
-    <!-- Add Style and Script for Preset Webpage Builder -->
-    <script src="js/lib/grapesjs-preset-webpage.min.js"></script>
-    <link rel="stylesheet" href="css/lib/grapesjs-preset-webpage.min.css" />
+    <script
+      src="js/lib/grapesjs-blocks-basic.js"
+      type="text/javascript"
+    ></script>
 
+    <!-- Custom -->
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div id="editor">
-      <p>Testing Editor using Grapes JS librrary</p>
+    <div id="navbar" class="sidenav d-flex flex-column overflow-scroll">
+      <nav class="navbar navbar-light">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h3 logo">Code Dexterous</span>
+        </div>
+      </nav>
+      <div class="my-2 d-flex flex-column">
+        <button
+          type="button"
+          class="btn btn-outline-secondary btn-sm mb-2 mx-2"
+        >
+          <i class="bi bi-file-earmark-plus"></i> Add Page
+        </button>
+        <ul class="list-group pages">
+          <li class="list-group-item d-flex justify-content-between">
+            Home
+            <div class="m-2">
+              <i class="bi bi-pencil-fill"></i>
+              <i class="bi bi-trash"></i>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            About
+            <div class="m-2">
+              <i class="bi bi-pencil-fill"></i>
+              <i class="bi bi-trash"></i>
+            </div>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            Contact Us
+            <div class="m-2">
+              <i class="bi bi-pencil-fill"></i>
+              <i class="bi bi-trash"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="home-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#block"
+              type="button"
+              role="tab"
+              aria-controls="block"
+              aria-selected="true"
+            >
+              <i class="bi bi-grid-fill"></i>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="trait-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#trait"
+              type="button"
+              role="tab"
+              aria-controls="trait"
+              aria-selected="false"
+            >
+              <i class="bi bi-layers-fill"></i>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="style-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#style"
+              type="button"
+              role="tab"
+              aria-controls="style"
+              aria-selected="false"
+            >
+              <i class="bi bi-palette-fill"></i>
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div
+            class="tab-pane fade show active"
+            id="block"
+            role="tabpanel"
+            aria-labelledby="block-tab"
+          >
+            <div id="blocks"></div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="trait"
+            role="tabpanel"
+            aria-labelledby="trait-tab"
+          >
+            <div id="layers-container"></div>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="style"
+            role="tabpanel"
+            aria-labelledby="style-tab"
+          >
+            <div id="styles-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-content">
+      <nav class="navbar navbar-light">
+        <div class="container-fluid">
+          <div class="panel__devices"></div>
+          <div class="panel__basic-actions"></div>
+        </div>
+      </nav>
+      <div id="editor"></div>
     </div>
 
     <script type="text/javascript" src="js/main.js"></script>
