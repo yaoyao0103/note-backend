@@ -111,6 +111,26 @@ html {
   color: #990011ff;
 }
 
-.bi {
-  color: #990011ff;
+.gjs-pn-btn {
+  border: 1px solid #990011ff;
+}
+
+// Customize Bootstrap CSS
+
+.btn,
+.nav-link,
+.modal-content,
+.form-control {
+  border-radius: 0 !important;
+}
+
+.btn {
+  .fa {
+    color: #990011ff;
+  }
+  &:hover {
+    .fa {
+      color: #fcf6f5ff;
+    }
+  }
 }

@@ -9,16 +9,6 @@
     <link href="css/lib/bootstrap.min.css" rel="stylesheet" />
     <script src="js/lib/popper.min.js"></script>
     <script src="js/lib/bootstrap.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="css/lib/bootstrap-icons.css"
-      rel="stylesheet"
-    />
 
     <script src="js/lib/grapes.min.js"></script>
     <link rel="stylesheet" href="css/lib/grapes.min.css" />
@@ -42,29 +32,49 @@
         <button
           type="button"
           class="btn btn-outline-secondary btn-sm mb-2 mx-2"
+          data-bs-toggle="modal"
+          data-bs-target="#addPageModal"
         >
-          <i class="bi bi-file-earmark-plus"></i> Add Page
+          <i class="fa fa-plus"></i> Add Page
         </button>
         <ul class="list-group pages">
-          <li class="list-group-item d-flex justify-content-between">
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
             Home
             <div class="m-2">
-              <i class="bi bi-pencil-fill"></i>
-              <i class="bi bi-trash"></i>
+              <button class="btn btn-sm btn-outline-primary">
+                <i class="fa fa-pencil"></i>
+              </button>
+              <button class="btn btn-sm btn-outline-danger">
+                <i class="fa fa-trash"></i>
+              </button>
             </div>
           </li>
-          <li class="list-group-item d-flex justify-content-between">
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
             About
             <div class="m-2">
-              <i class="bi bi-pencil-fill"></i>
-              <i class="bi bi-trash"></i>
+              <button class="btn btn-sm btn-outline-primary">
+                <i class="fa fa-pencil"></i>
+              </button>
+              <button class="btn btn-sm btn-outline-danger">
+                <i class="fa fa-trash"></i>
+              </button>
             </div>
           </li>
-          <li class="list-group-item d-flex justify-content-between">
+          <li
+            class="list-group-item d-flex justify-content-between align-items-center"
+          >
             Contact Us
             <div class="m-2">
-              <i class="bi bi-pencil-fill"></i>
-              <i class="bi bi-trash"></i>
+              <button class="btn btn-sm btn-outline-primary">
+                <i class="fa fa-pencil"></i>
+              </button>
+              <button class="btn btn-sm btn-outline-danger">
+                <i class="fa fa-trash"></i>
+              </button>
             </div>
           </li>
         </ul>
@@ -82,7 +92,7 @@
               aria-controls="block"
               aria-selected="true"
             >
-              <i class="bi bi-grid-fill"></i>
+              <i class="fa fa-cubes"></i>
             </button>
           </li>
           <li class="nav-item" role="presentation">
@@ -96,7 +106,7 @@
               aria-controls="layer"
               aria-selected="false"
             >
-              <i class="bi bi-layers-fill"></i>
+              <i class="fa fa-tasks"></i>
             </button>
           </li>
           <li class="nav-item" role="presentation">
@@ -110,7 +120,7 @@
               aria-controls="style"
               aria-selected="false"
             >
-              <i class="bi bi-palette-fill"></i>
+              <i class="fa fa-paint-brush"></i>
             </button>
           </li>
           <li class="nav-item" role="presentation">
@@ -124,7 +134,7 @@
               aria-controls="trait"
               aria-selected="false"
             >
-              <i class="bi bi-gear-fill"></i>
+              <i class="fa fa-cog"></i>
             </button>
           </li>
         </ul>
@@ -172,6 +182,55 @@
         </div>
       </nav>
       <div id="editor"></div>
+      <div
+        class="modal fade"
+        id="addPageModal"
+        tabindex="-1"
+        aria-labelledby="addPageModalLabel"
+        aria-hidden="true"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form onsubmit="">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addPageModalLabel">Create Page</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="col-auto">
+                  <label for="name" class="visually-hidden">Name</label>
+                  <input
+                    type="text"
+                    class="form-control form-control-sm"
+                    id="name"
+                    placeholder="Name of Page"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-sm"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="submit" class="btn btn-primary btn-sm">
+                  Save changes
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script type="text/javascript" src="js/main.js"></script>
