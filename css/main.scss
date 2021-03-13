@@ -94,19 +94,23 @@ html {
 
 /* Theming */
 .gjs-one-bg {
-  background-color: #fff;
+  background-color: #fcf6f5ff;
 }
 
 .gjs-two-color {
-  color: #9ca8bb;
+  color: #990011ff;
 }
 
 .gjs-three-bg {
-  background-color: #1e8fe1;
-  color: white;
+  background-color: #990011ff;
+  color: #fcf6f5ff;
 }
 
 .gjs-four-color,
 .gjs-four-color-h:hover {
-  color: #1e8fe1;
+  color: #990011ff;
+}
+
+.bi {
+  color: #990011ff;
 }

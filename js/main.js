@@ -6,9 +6,32 @@ const editor = grapesjs.init({
   },
   styleManager: {
     appendTo: "#styles-container",
+    sectors: [
+      {
+        name: "Dimension",
+        open: false,
+        buildProps: ["width", "min-height", "padding"],
+        properties: [
+          {
+            type: "integer",
+            name: "The width",
+            property: "width",
+            units: ["px", "%"],
+            defaults: "auto",
+            min: 0,
+          },
+        ],
+      },
+    ],
   },
   layerManager: {
     appendTo: "#layers-container",
+  },
+  traitManager: {
+    appendTo: "#trait-container",
+  },
+  selectorManager: {
+    appendTo: "#styles-container",
   },
   panels: {
     defaults: [
@@ -63,4 +86,11 @@ const editor = grapesjs.init({
   pluginsOpts: {
     "gjs-blocks-basic": {},
   },
+});
+// Commands
+editor.Commands.add("set-device-desktop", {
+  run: (editor) => editor.setDevice("Desktop"),
+});
+editor.Commands.add("set-device-mobile", {
+  run: (editor) => editor.setDevice("Mobile"),
 });
