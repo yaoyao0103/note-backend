@@ -7,8 +7,18 @@ function validatForm() {
     forms.classList.add("was-validated");
     return false;
   }
+
+  return submitForm();
+}
+
+function submitForm() {
+  const nameField = document.getElementById("name");
+  const nameFieldValue = nameField.value;
+  console.log("nameFieldValue :>> ", nameFieldValue);
+  nameField.value = "";
   return true;
 }
+
 function clearForm() {
   /**
    * Get name field and reset it's value
