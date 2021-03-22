@@ -9,3 +9,15 @@ function validatForm() {
   }
   return true;
 }
+function clearForm() {
+  /**
+   * Get name field and reset it's value
+   */
+  const nameField = document.getElementById("name");
+  nameField.value = "";
+  /**
+   * Remove was-validated class from Form
+   */
+  const forms = document.getElementById("create-page");
+  forms.classList.remove("was-validated");
+}
