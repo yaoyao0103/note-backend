@@ -1,5 +1,6 @@
-function validatForm() {
+function validatForm(e) {
   "use strict";
+  e.preventDefault();
   const forms = document.getElementById("create-page");
   if (!forms.checkValidity()) {
     event.preventDefault();
