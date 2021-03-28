@@ -30,6 +30,9 @@ mongoose.connect(
 app.get('/', (req, res) => {
   res.render('home', { title: 'Webpage Builder' });
 });
+app.get('/editor', (req, res) => {
+  res.render('editor', { title: 'Webpage Builder' });
+});
 
 const PORT = process.env.APP_PORT || 8080;
 app.listen(PORT, () => {
