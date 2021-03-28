@@ -17,6 +17,7 @@ function submitForm() {
   const nameFieldValue = nameField.value;
   console.log("nameFieldValue :>> ", nameFieldValue);
   nameField.value = "";
+  clearForm();
   return true;
 }
 
