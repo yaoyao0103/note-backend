@@ -134,3 +134,24 @@ html {
     }
   }
 }
+
+/** Error **/
+.error {
+  .bg-body {
+    min-height: 150px;
+    max-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .title {
+      font-weight: 600;
+    }
+  }
+  .btn {
+    border-radius: 40px !important;
+    padding: 15px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 150px;
+  }
+}

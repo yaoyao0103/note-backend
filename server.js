@@ -2,6 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import path from 'path';
+import uiRoute from './ui/ui.route';
 //Initialize App
 const app = express();
 app.use(express.json());
@@ -27,12 +28,7 @@ mongoose.connect(
   },
 );
 
-app.get('/', (req, res) => {
-  res.render('home', { title: 'Webpage Builder' });
-});
-app.get('/editor', (req, res) => {
-  res.render('editor', { title: 'Webpage Builder' });
-});
+app.use('/', uiRoute);
 
 const PORT = process.env.APP_PORT || 8080;
 app.listen(PORT, () => {
