@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import path from 'path';
 import uiRoute from './ui/ui.route';
+import pageRoute from './page/page.route';
 //Initialize App
 const app = express();
 app.use(express.json());
@@ -29,6 +30,7 @@ mongoose.connect(
 );
 
 app.use('/', uiRoute);
+app.use('/pages', pageRoute);
 
 const PORT = process.env.APP_PORT || 8080;
 app.listen(PORT, () => {
