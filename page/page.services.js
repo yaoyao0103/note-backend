@@ -1,6 +1,12 @@
 import Pages from './page.modal';
 
-export const createPage = async (pageBody) => {};
+export const createPage = async (pageBody) => {
+  const slug = pageBody.name.toLowerCase().split(' ').join('-');
+  pageBody.slug = slug;
+  const page = new Pages(pageBody);
+  const pageResponse = await page.save();
+  return pageResponse;
+};
 export const listPages = async () => {
   const pages = await Pages.find({});
   console.log('pages :>> ', pages);

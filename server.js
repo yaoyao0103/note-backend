@@ -29,8 +29,8 @@ mongoose.connect(
   },
 );
 
-app.use('/', uiRoute);
 app.use('/pages', pageRoute);
+app.use('/', uiRoute);
 
 const PORT = process.env.APP_PORT || 8080;
 app.listen(PORT, () => {
