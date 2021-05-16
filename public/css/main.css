@@ -28,7 +28,7 @@ html {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
-          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
@@ -65,8 +65,8 @@ html {
 
 .nav {
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .gjs-pn-panel {
@@ -93,17 +93,17 @@ html {
 
 #block #blocks .gjs-blocks-c {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 #block #blocks .gjs-block {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 #block #blocks .gjs-block-label {
@@ -156,11 +156,11 @@ html {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .error .bg-body .title {
