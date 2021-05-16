@@ -16,8 +16,8 @@ const editor = grapesjs.init({
       'Content-Type': 'application/json',
     },
     id: 'mycustom-',
-    urlStore: `/pages/60952a402eef482490124168/content`,
-    urlLoad: `/pages/60952a402eef482490124168/content`,
+    urlStore: `/pages/${location.pathname.split('/')[2]}/content`,
+    urlLoad: `/pages/${location.pathname.split('/')[2]}/content`,
   },
   styleManager: {
     appendTo: '#styles-container',
