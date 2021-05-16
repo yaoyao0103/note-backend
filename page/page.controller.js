@@ -37,3 +37,9 @@ export const changeContent = async (req, res) => {
   const pageContent = await savePageContent(pageId, req.body);
   res.json(pageContent);
 };
+export const loadContent = async (req, res) => {
+  const { pageId } = req.params;
+  res.header('Content-Type', 'application/json');
+  const pageData = await pageDetails(pageId);
+  res.json(pageData.content);
+};

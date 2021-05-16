@@ -4,6 +4,21 @@ const editor = grapesjs.init({
   blockManager: {
     appendTo: '#blocks',
   },
+  storageManager: {
+    type: 'remote',
+    stepsBeforeSave: 3,
+    contentTypeJson: true,
+    storeComponents: true,
+    storeStyles: true,
+    storeHtml: true,
+    storeCss: true,
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    id: 'mycustom-',
+    urlStore: `/pages/60952a402eef482490124168/content`,
+    urlLoad: `/pages/60952a402eef482490124168/content`,
+  },
   styleManager: {
     appendTo: '#styles-container',
     sectors: [

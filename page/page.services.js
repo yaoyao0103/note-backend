@@ -9,10 +9,15 @@ export const createPage = async (pageBody) => {
 };
 export const listPages = async () => {
   const pages = await Pages.find({});
-  console.log('pages :>> ', pages);
   return pages;
 };
 export const deletePage = async (pageId) => {};
 export const updatePage = async (pageId, pageBody) => {};
-export const pageDetails = async (pageId) => {};
-export const savePageContent = async (pageId, pageContent) => {};
+export const pageDetails = async (pageId) => {
+  const pages = await Pages.findOne({ _id: pageId });
+  return pages;
+};
+export const savePageContent = async (pageId, content) => {
+  const pageUpdated = await Pages.findOneAndUpdate({ _id: pageId }, { content });
+  return pageUpdated;
+};
