@@ -7,7 +7,14 @@ import pageRoute from './page/page.route';
 //Initialize App
 const app = express();
 app.use(express.json());
-app.use(cors());
+const corsOptions = {
+  origin: function (origin, callback) {
+    callback(null, true);
+  },
+};
+
+corsOptions.credentials = true;
+app.use(cors(corsOptions));
 
 //HTML and Static file
 app.use('/resources', express.static(path.join(__dirname, 'public')));
