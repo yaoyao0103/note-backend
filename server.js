@@ -4,6 +4,7 @@ import cors from 'cors';
 import path from 'path';
 import uiRoute from './ui/ui.route';
 import pageRoute from './page/page.route';
+import assetRoute from './assets/assets.route';
 //Initialize App
 const app = express();
 app.use(express.json());
@@ -37,6 +38,7 @@ mongoose.connect(
 );
 
 app.use('/pages', pageRoute);
+app.use('/assets', assetRoute);
 app.use('/', uiRoute);
 
 const PORT = process.env.APP_PORT || 8080;
