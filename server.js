@@ -5,6 +5,7 @@ import path from 'path';
 import uiRoute from './ui/ui.route';
 import pageRoute from './page/page.route';
 import assetRoute from './assets/assets.route';
+import projectRoute from './project/project.route';
 //Initialize App
 const app = express();
 app.use(express.json());
@@ -36,10 +37,10 @@ mongoose.connect(
     console.log('Connected to MongoDB');
   },
 );
-
-app.use('/pages', pageRoute);
-app.use('/assets', assetRoute);
-app.use('/', uiRoute);
+app.use('/api/projects', projectRoute);
+app.use('/api/pages', pageRoute);
+app.use('/api/assets', assetRoute);
+app.use('/api/', uiRoute);
 
 const PORT = process.env.APP_PORT || 8080;
 app.listen(PORT, () => {
