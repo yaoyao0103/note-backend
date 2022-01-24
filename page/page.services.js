@@ -21,3 +21,7 @@ export const savePageContent = async (pageId, content) => {
   const pageUpdated = await Pages.findOneAndUpdate({ _id: pageId }, { content });
   return pageUpdated;
 };
+export const findPageById = async (pageId) => {
+  const page = await Pages.findById(pageId);
+  return page;
+};
