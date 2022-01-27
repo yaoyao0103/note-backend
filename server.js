@@ -38,11 +38,11 @@ mongoose.connect(
     console.log('Connected to MongoDB');
   },
 );
-app.use('/api/projects', projectRoute);
-app.use('/api/pages', pageRoute);
-app.use('/api/assets', assetRoute);
-app.use('/api/', uiRoute);
-app.get('/:pageId?', renderHtml);
+app.use('/projects', projectRoute);
+app.use('/pages', pageRoute);
+app.use('/assets', assetRoute);
+app.use('/', uiRoute);
+app.get('/pages/:pageId?', renderHtml);
 
 const PORT = process.env.APP_PORT || 8080;
 app.listen(PORT, () => {

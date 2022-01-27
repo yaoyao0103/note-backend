@@ -9,7 +9,9 @@ import {
 
 export const create = async (req, res) => {
   const pageBody = req.body;
+  //console.log(pageBody);
   const page = await createPage(pageBody);
+  console.log(page);
   res.json(page);
 };
 export const list = async (req, res) => {
